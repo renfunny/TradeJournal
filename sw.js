@@ -1,23 +1,23 @@
 const CACHE = 'ftj-v3';
 const STATIC = [
-  '/dtjrl.github.io/',
-  '/dtjrl.github.io/index.html',
-  '/dtjrl.github.io/admin.html',
-  '/dtjrl.github.io/checklist.html',
-  '/dtjrl.github.io/rules.html',
-  '/dtjrl.github.io/info.html',
-  '/dtjrl.github.io/analytics.html',
-  '/dtjrl.github.io/nav.js',
-  '/dtjrl.github.io/mobile.css',
-  '/dtjrl.github.io/icon-192.png',
-  '/dtjrl.github.io/icon-512.png',
-  '/dtjrl.github.io/admin/admin.html',
-  '/dtjrl.github.io/admin/admin-core.js',
-  '/dtjrl.github.io/admin/log-trade.html',
-  '/dtjrl.github.io/admin/edit-trade.html',
-  '/dtjrl.github.io/admin/bias.html',
-  '/dtjrl.github.io/admin/weekly.html',
-  '/dtjrl.github.io/admin/premarket.html',
+  '/TradeJournal/',
+  '/TradeJournal/index.html',
+  '/TradeJournal/admin.html',
+  '/TradeJournal/checklist.html',
+  '/TradeJournal/rules.html',
+  '/TradeJournal/info.html',
+  '/TradeJournal/analytics.html',
+  '/TradeJournal/nav.js',
+  '/TradeJournal/mobile.css',
+  '/TradeJournal/icon-192.png',
+  '/TradeJournal/icon-512.png',
+  '/TradeJournal/admin/admin.html',
+  '/TradeJournal/admin/admin-core.js',
+  '/TradeJournal/admin/log-trade.html',
+  '/TradeJournal/admin/edit-trade.html',
+  '/TradeJournal/admin/bias.html',
+  '/TradeJournal/admin/weekly.html',
+  '/TradeJournal/admin/premarket.html',
   'https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap'
 ];
 
@@ -57,7 +57,7 @@ self.addEventListener('fetch', e => {
   }
 
   // Network-first for HTML and JS — always get latest, fall back to cache offline
-  if (url.pathname.endsWith('.html') || url.pathname.endsWith('.js') || url.pathname === '/dtjrl.github.io/') {
+  if (url.pathname.endsWith('.html') || url.pathname.endsWith('.js') || url.pathname === '/TradeJournal/') {
     e.respondWith(
       fetch(e.request.clone()).then(res => {
         if (res && res.status === 200) {
@@ -69,7 +69,7 @@ self.addEventListener('fetch', e => {
         // Offline — serve from cache, fallback to index.html for navigation
         return caches.match(e.request).then(cached => {
           if (cached) return cached;
-          if (e.request.mode === 'navigate') return caches.match('/dtjrl.github.io/index.html');
+          if (e.request.mode === 'navigate') return caches.match('/TradeJournal/index.html');
         });
       })
     );
