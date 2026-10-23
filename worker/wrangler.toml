@@ -1,0 +1,7 @@
+name = "trade-journal-proxy"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+
+# Secrets (set with `npx wrangler secret put <NAME>`, never commit them):
+#   NOTION_TOKEN       Notion internal integration secret
+#   ANTHROPIC_API_KEY  for AI grading / weekly coaching

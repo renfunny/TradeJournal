@@ -1,9 +1,9 @@
 // ── SHARED ADMIN CONSTANTS ────────────────────────────────────────────────────
-const WORKER   = 'https://trade-journal-proxy.daniel-mouldd.workers.dev';
-const DB_ID    = '5398f956345943b7b12b2298bbb6e127';
-const BIAS_DB  = 'c163f7373bb44be19ae4f4a886384ddf';
-const WEEKLY_DB= '6d1309c6e6174f489e32293e253ae729';
-const VIOLATIONS_DB = '3882ac472cd280a0a446d576c20fb20c';
+const WORKER   = 'https://trade-journal-proxy.renfunny.workers.dev';
+const DB_ID    = '378f23efed4c4b528ef8fcb02282342f';
+const BIAS_DB  = '57e19afa34ed4489ac7b6907514171b0';
+const WEEKLY_DB= 'a47245432fc74c4b97ef1b88c28e518c';
+const VIOLATIONS_DB = 'b0a701440ec94f1f824b49a5a9a4bb9f';
 const PASS     = 'Pammolad123#';
 const TODAY    = new Date().toISOString().split('T')[0];
 
